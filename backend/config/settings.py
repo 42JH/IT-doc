@@ -9,11 +9,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # 외부 API 키 등 비밀값은 backend/.env 에서 로드 (.env.example 참고, .env는 깃 제외)
 load_dotenv(BASE_DIR / ".env")
 
-SECRET_KEY = "django-insecure-itdoc-dev-key-change-in-production"
+# 배포 시 .env에서 DJANGO_SECRET_KEY, DJANGO_DEBUG=False, DJANGO_ALLOWED_HOSTS를 지정
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-local-dev-only")
 
-DEBUG = True
+DEBUG = os.getenv("DJANGO_DEBUG", "True").lower() == "true"
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
