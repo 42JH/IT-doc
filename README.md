@@ -28,6 +28,8 @@ python manage.py seed_data       # 진료과(HIRA 코드 1:1)·키워드 사전 
 python manage.py runserver
 ```
 
+테스트 실행: `python manage.py test api` (backend 폴더에서, DB 불필요)
+
 ### (선택) 심평원 실데이터 적재 — 구미권 병·의원 550여 곳
 
 공공데이터포털에서 **건강보험심사평가원_병원정보서비스** 활용신청 후:
