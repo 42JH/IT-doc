@@ -20,3 +20,7 @@ backend/api/data/keyword_candidates.csv
 .idea/
 Thumbs.db
 .DS_Store
+
+# 로컬 도구 상태·실행 로그
+.omc/
+*.log
