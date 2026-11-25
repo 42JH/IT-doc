@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/cover.png" alt="잇닥 IT-doc 표지" width="100%"></p>
+
 # 잇닥 (IT-doc)
 
 증상을 문장으로 입력하면 갈 만한 진료과를 1~3순위로 추천하고, 근처 병원을 지도와 길찾기로 안내하는 웹 서비스입니다.
